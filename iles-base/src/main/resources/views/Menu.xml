@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+	<menuitem name="education-root" title="Education" order="-83" if="__config__.app.isApp('education')"
+		icon="fa-handshake-o" icon-background="orange"/>
+	
+	<menuitem name="education-student-all" title="Student" action="education.student.all" parent="education-root" />
+	
+	<action-view name="education.student.all" title="Student" model="fr.iles.apps.education.db.Student">
+		<view type="grid" name="student-grid"/>
+		<view type="form" name="student-form"/>
+	</action-view>
+
+</object-views>

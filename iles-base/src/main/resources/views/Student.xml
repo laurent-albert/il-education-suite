@@ -16,6 +16,7 @@
        	   <panel colSpan="6" itemSpan="12">
        	   		<field name="firstName"/>
 	     		<field name="lastName"/>
+                <field name="titleSelect" showTitle="false" placeholder="Civility" colSpan="2"/>
 	       </panel>
        </panel>     
     </form>

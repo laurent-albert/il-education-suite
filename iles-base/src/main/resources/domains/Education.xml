@@ -5,6 +5,7 @@
 	<module name="education" package="fr.iles.apps.education.db"/>
 
 	<entity name="Student" lang="java" cachable="true">
+		<integer name="titleSelect" title="Civility" selection="student.title.type.select" massUpdate="true"/>
 		<string name="firstName" title="First Name" />
 		<string name="lastName" title="Last Name"  required="true" />
 		

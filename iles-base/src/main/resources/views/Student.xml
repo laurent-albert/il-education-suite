@@ -8,16 +8,36 @@
        <field name="lastName" />
 
     </grid>
-    
-   <form name="student-form" title="Student" model="fr.iles.apps.education.db.Student" width="large"
-    	 >
-       <panel>
 
-       	   <panel colSpan="6" itemSpan="12">
-       	   		<field name="firstName"/>
-	     		<field name="lastName"/>
+    <form name="student-form" title="Student" model="fr.iles.apps.education.db.Student" width="large">
+
+        <panel name="main">
+            <panel colSpan="6" itemSpan="12">
+                <field name="firstName"/>
+                <field name="lastName"/>
                 <field name="titleSelect" showTitle="false" placeholder="Civility" colSpan="2"/>
-	       </panel>
-       </panel>     
+            </panel>
+        </panel>
+        <panel-tabs>
+            <panel name="information" title="Information">
+                <panel name="studentAddress" title="Student address" colSpan="12">
+                    <field name="contactAddress">
+                        <editor x-show-titles="false">
+                            <field name="addressL2" x-bind="{{addressL2|uppercase}}"
+                                   placeholder="e.g. Financial department, CEO"/>
+                            <field name="addressL3" x-bind="{{addressL3|uppercase}}"
+                                   placeholder="e.g. Building A, Entry 2, 2nd Floor, Door 2E"/>
+                            <field name="addressL4" x-bind="{{addressL4|uppercase}}"/>
+                            <field name="addressL5" x-bind="{{addressL5|uppercase}}" placeholder="e.g. POB 254"/>
+                            <field name="city" canNew="true" onChange="action-address-change-city" form-view="city-form"
+                                   grid-view="city-grid"/>
+                            <field name="addressL6" x-bind="{{addressL6|uppercase}}" required="true"/>
+                            <field name="addressL7Country" required="true" form-view="country-form"
+                                   grid-view="country-grid"/>
+                        </editor>
+                    </field>
+                </panel>
+            </panel>
+        </panel-tabs>
     </form>
 </object-views>

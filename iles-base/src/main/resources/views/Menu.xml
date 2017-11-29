@@ -7,10 +7,16 @@
 		icon="fa-handshake-o" icon-background="orange"/>
 	
 	<menuitem name="education-student-all" title="Student" action="education.student.all" parent="education-root" />
-	
+	<menuitem name="education-program-all" title="Program" action="education.program.all" parent="education-root" />
+
 	<action-view name="education.student.all" title="Student" model="fr.iles.apps.education.db.Student">
 		<view type="grid" name="student-grid"/>
 		<view type="form" name="student-form"/>
+	</action-view>
+
+	<action-view name="education.program.all" title="Program" model="fr.iles.apps.education.db.Program">
+		<view type="grid" name="program-grid"/>
+		<view type="form" name="program-form"/>
 	</action-view>
 
 </object-views>

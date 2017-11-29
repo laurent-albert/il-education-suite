@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_5.0.xsd">
+
+	<module name="education" package="fr.iles.apps.education.db"/>
+
+	<entity name="Program" lang="java" cachable="true">
+		<string name="programCode" title="Program Code" required="true"/>
+		<string name="programAbbreviation" title="Program Abbreviation"/>
+		<string name="programName" title="Program Name" required="true"/>
+
+
+	</entity>
+
+</domain-models>

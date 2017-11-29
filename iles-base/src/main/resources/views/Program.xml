@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+    
+    <grid name="program-grid" title="Program" model="fr.iles.apps.education.db.Program" >
+       <field name="programCode" />
+       <field name="programAbbreviation" />
+        <field name="programName" />
+
+    </grid>
+
+    <form name="program-form" title="Program" model="fr.iles.apps.education.db.Program" width="large">
+
+        <panel name="main">
+            <panel colSpan="6" itemSpan="12">
+                <field name="programCode"/>
+                <field name="programAbbreviation"/>
+                <field name="programName"/>
+            </panel>
+        </panel>
+    </form>
+</object-views>

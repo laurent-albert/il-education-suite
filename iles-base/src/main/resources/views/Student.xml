@@ -2,7 +2,13 @@
 <object-views xmlns="http://axelor.com/xml/ns/object-views"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
-    
+
+    <grid name="student-program-grid" title="Programs" model="fr.iles.apps.education.db.Program">
+        <field name="programCode"/>
+        <field name="programAbbreviation"/>
+        <field name="programName"/>
+    </grid>
+
     <grid name="student-grid" title="Student" model="fr.iles.apps.education.db.Student" >
        <field name="firstName" />
        <field name="lastName" />
@@ -18,6 +24,7 @@
                 <field name="titleSelect" showTitle="false" placeholder="Civility" colSpan="2"/>
             </panel>
         </panel>
+        <panel-related field="programSet" grid-view="student-program-grid" />
         <panel-tabs>
             <panel name="information" title="Information">
                 <panel name="studentAddress" title="Student address" colSpan="12">
